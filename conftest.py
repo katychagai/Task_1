@@ -1,14 +1,11 @@
 import pytest
 from unittest.mock import Mock
-from ingredient import Ingredient
+from helpers import get_three_ingredients
 
 
 @pytest.fixture
 def three_ingredients():
-    ingredient1 = Ingredient('SAUCE', 'Соус', 50.0)
-    ingredient2 = Ingredient('FILLING', 'Начинка', 100.0)
-    ingredient3 = Ingredient('SAUCE', 'Соус2', 60.0)
-    return [ingredient1, ingredient2, ingredient3]
+    return get_three_ingredients()
 
 
 #Фикстура для создания mock булочки для тестов get_receipt
